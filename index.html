@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="src/favicon.png" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+    <script src="https://unpkg.com/axios@0.23.0/dist/axios.min.js" defer></script>
+    <script src="script/script.js" type='module' defer></script>   
+</head>
+<body>
+    <aside>
+        <div class='search'>
+            <button class='button rect-button' id='open-search-window'>Search for places</button>
+            <img class='button round-button' id='geolocation' src="src/gps.png" alt="geolocation">
+        </div>
+        <div id='current-weather'>
+        </div>
+        <div id='current-location'>
+        </div>
+        <div id='search-window'>
+            <div class="search-header">
+                <span id='close-search-window'>X</span>
+            </div>
+            <div class="search-area">
+                <input type="text" name="text" placeholder='search location' id="search-bar" autocomplete="off">
+                <button class='button main-button' id='search-button'>Search</button>
+                <ul id="suggest"></ul>
+            </div>
+            <ul id='saved-cities'>
+            </ul>
+        </div>
+    </aside>
+    <main>
+        <div class='converter'>
+            <button class='button round-button selected' value='celsius'>°C</button>
+            <button class='button round-button' value='fahrenheit'>°F</button>
+        </div>
+        <section class='forecast'>
+            <h2>Forecast</h2>
+            <div id="forecast-grid">        
+            </div>
+        </section>
+        <section class="highlights">
+            <h2>Today's highlights</h2>
+            <div id='highlights-grid'>
+            </div>
+        </section>
+    </main>
+    <div id="errorMsg"></div>
+</body>
+</html>
+
+<!-- USE MATERIAL ICONS  -->
