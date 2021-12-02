@@ -149,7 +149,7 @@ function getWeather(e)
 
     e.preventDefault();
     
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=2f210cbdcc784f79801124639212605&q=${query}&days=7&aqi=no&alerts=no`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=2f210cbdcc784f79801124639212605&q=${query}&days=7&aqi=no&alerts=no`)
     .then(response => response.json())
     .then(function(results){
         
